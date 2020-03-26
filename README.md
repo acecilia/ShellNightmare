@@ -98,8 +98,8 @@ After seeing the results, we can say that:
 ### About `zsh`:
 
 1. `zsh` under MacOS sources `$HOME/.zshenv` regardless of the type of shell. You could think that this is a safe place to customize the environment. The problem is that `/etc/zprofile` is sourced **after** for the `interactive + login` and `non-interactive + login` shell types, which will rearange your `PATH` environmental variable and override any customization done in `$HOME/.zshenv`. 
-
-  One way to work around this issue is to setup the files as follows:
+	
+	One way to work around this issue is to setup the files as follows:
 	
 	1. Setup your enviornment inside `$HOME/.zshenv`.
 	2. Inside `$HOME/.zprofile`, write the following:
